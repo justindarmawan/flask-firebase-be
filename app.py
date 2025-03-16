@@ -6,7 +6,8 @@ import os
 import json
 
 app = Flask(__name__)
-CORS(app, origins=["https://justindarmawan.github.io"])
+# CORS(app, origins=["https://justindarmawan.github.io"])
+CORS(app)
 
 cred = credentials.Certificate("/etc/secrets/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
